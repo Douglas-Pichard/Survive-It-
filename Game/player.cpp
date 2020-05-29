@@ -12,7 +12,7 @@ Player::Player(std::string id)
 {
 	_speed = 0.1f;
 
-	_translation = Vector_2D(0, 0);
+	_translation = Vector_2D(0, 400);
 
 	_collider.set_radius(_width / 5.0f);
 	_collider.set_translation(Vector_2D(_width / 2.0f, (float)_height));

@@ -9,7 +9,7 @@
 #include "vector_2D.h"
 #include "configuration.h"
 #include "circle_2D.h"
-#include "scene.h"
+#include "game_scene.h"
 
 
 class Game_Object

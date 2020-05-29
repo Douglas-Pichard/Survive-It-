@@ -44,6 +44,7 @@ void Input::get_input()
 			_button_state[Button::QUIT] = Button_State::PRESSED;
 			break;
 
+
 		case SDL_SYSWMEVENT:
 			if(event.syswm.msg->msg.win.wParam == ID_FILE_EXIT)
 			{
@@ -70,6 +71,20 @@ void Input::get_input()
 		case SDL_KEYDOWN:
 			switch(event.key.keysym.scancode)
 			{
+			case SDL_SCANCODE_P:
+				if (!is_button_state(Button::PAUSE, Button_State::DOWN))
+				{
+					_button_state[Button::PAUSE] = Button_State::PRESSED;
+					
+				}
+				break;
+			case SDL_SCANCODE_E:
+				if (!is_button_state(Button::START, Button_State::DOWN))
+				{
+					_button_state[Button::START] = Button_State::PRESSED;
+
+				}
+				break;
 			case SDL_SCANCODE_W:
 				if(!is_button_state(Button::UP, Button_State::DOWN))
 				{
@@ -111,6 +126,9 @@ void Input::get_input()
 		case SDL_KEYUP:
 			switch(event.key.keysym.scancode)
 			{
+			case SDL_SCANCODE_P:
+				_button_state[Button::PAUSE] = Button_State::RELEASED;
+				break;
 			case SDL_SCANCODE_W:
 				_button_state[Button::UP] = Button_State::RELEASED;
 				break;

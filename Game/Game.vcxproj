@@ -156,14 +156,18 @@
     <ClCompile Include="game_scene.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pause_scene.cpp" />
+    <ClCompile Include="pinky.cpp" />
     <ClCompile Include="player.cpp" />
-    <ClCompile Include="portal_entry.cpp" />
-    <ClCompile Include="portal_exit.cpp" />
     <ClCompile Include="scene.cpp" />
     <ClCompile Include="sound.cpp" />
     <ClCompile Include="spikes.cpp" />
     <ClCompile Include="text.cpp" />
     <ClCompile Include="texture.cpp" />
+    <ClCompile Include="backgroud.cpp" />
+    <ClCompile Include="title_background.cpp" />
+    <ClCompile Include="title_scene.cpp" />
+    <ClCompile Include="title_screen.cpp" />
     <ClCompile Include="vector_2D.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -177,15 +181,19 @@
     <ClInclude Include="game_object.h" />
     <ClInclude Include="game_scene.h" />
     <ClInclude Include="input.h" />
+    <ClInclude Include="pause_scene.h" />
+    <ClInclude Include="pinky.h" />
     <ClInclude Include="player.h" />
-    <ClInclude Include="portal_entry.h" />
-    <ClInclude Include="portal_exit.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="scene.h" />
     <ClInclude Include="sound.h" />
     <ClInclude Include="spikes.h" />
     <ClInclude Include="text.h" />
     <ClInclude Include="texture.h" />
+    <ClInclude Include="background.h" />
+    <ClInclude Include="title_background.h" />
+    <ClInclude Include="title_scene.h" />
+    <ClInclude Include="title_screen.h" />
     <ClInclude Include="vector_2D.h" />
   </ItemGroup>
   <ItemGroup>

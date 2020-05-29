@@ -7,12 +7,26 @@
 
 Assets::Assets(SDL_Renderer* renderer)
 {
+
+	// Cache Pinky Texture.
+	{
+		Texture* texture = new Texture("Texture.Pinky", "Assets/pinky0.png", renderer);
+		_assets[texture->id()] = texture;
+	}
 	// Create player walking texture.
 	
 	{
 		const int frame_count = 10;
 		const Uint32 frame_duration_milliseconds = 100;
 		Asset* player_animated_texture = new Animated_Texture("Texture.Pinky.Walking", "Assets/pinky.walking.png", renderer, 6, 200);
+		_assets[player_animated_texture->id()] = player_animated_texture;
+	}
+
+	//Animated Title
+	{
+		const int frame_count = 10;
+		const Uint32 frame_duration_milliseconds = 100;
+		Asset* player_animated_texture = new Animated_Texture("Texture.Title.Background", "Assets/title.png", renderer, 2, 200);
 		_assets[player_animated_texture->id()] = player_animated_texture;
 	}
 
@@ -53,6 +67,23 @@ Assets::Assets(SDL_Renderer* renderer)
 		_assets[texture->id()] = texture;
 	}
 
+	//Background texture title
+	{
+		Texture* texture = new Texture("Texture.Background1", "Assets/background1.png", renderer);
+		_assets[texture->id()] = texture;
+	}
+	//Background texture game
+	{
+		Texture* texture = new Texture("Texture.Background2", "Assets/background2.png", renderer);
+		_assets[texture->id()] = texture;
+	}
+
+	//Title Screen Texture
+	{
+		Texture* texture = new Texture("Texture.Place Holder", "Assets/place.holder.png", renderer);
+		_assets[texture->id()] = texture;
+	}
+
 	// Create music sound
 	{
 		Sound* sound = new Sound("Sound.Music", "Assets/music.wav");
@@ -85,29 +116,9 @@ Assets::Assets(SDL_Renderer* renderer)
 		_assets[sound->id()] = sound;
 	}
 
-	// Create portal entry texture.
-	{
-		const int frame_count = 8;
-		const Uint32 frame_duration_milliseconds = 100;
-		Asset* animated_texture = new Animated_Texture("Texture.Portal.Entry", "Assets/portal.green.png", renderer, frame_count, frame_duration_milliseconds);
-		_assets[animated_texture->id()] = animated_texture;
-	}
-
-	// Create portal exit texture.
-	{
-		const int frame_count = 8;
-		const Uint32 frame_duration_milliseconds = 100;
-		Asset* animated_texture = new Animated_Texture("Texture.Portal.Exit", "Assets/portal.purple.png", renderer, frame_count, frame_duration_milliseconds);
-		_assets[animated_texture->id()] = animated_texture;
-	}
 	
-	// Create spikes texture.
-	{
-		const int frame_count = 1;
-		const Uint32 frame_duration_milliseconds = 100;
-		Asset* animated_texture = new Animated_Texture("Texture.Spikes.Entry", "Assets/spike.space.png", renderer, frame_count, frame_duration_milliseconds);
-		_assets[animated_texture->id()] = animated_texture;
-	}
+
+	
 }
 
 Assets::~Assets()

@@ -7,6 +7,6 @@ struct Configuration
 	bool should_change_color = false;
 	bool teleport = false;
 
-	int window_width = 600;
-	int window_height = 700;
+	int window_width = 1400;
+	int window_height = 800;
 };

@@ -41,3 +41,7 @@ std::string Scene::id()
 {
 	return _id;
 }
+SDL_Color Scene::background_color()
+{
+	return _background_color;
+}

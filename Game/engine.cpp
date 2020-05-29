@@ -25,8 +25,8 @@ Engine::Engine(std::string window_name, Configuration* config)
 	}
 
 	const char* game_title = window_name.c_str();
-	const int x            = 100;
-	const int y            = 100;
+	const int x            = 50;
+	const int y            = 50;
 	_window = SDL_CreateWindow(game_title, x, y, config->window_width, config->window_height, SDL_WINDOW_RESIZABLE);
 	if(_window == nullptr)
 	{
@@ -43,6 +43,8 @@ Engine::Engine(std::string window_name, Configuration* config)
 		std::cout << "SDL Error: " << SDL_GetError() << std::endl;
 		exit(1);
 	}
+
+
 
 	const int image_init_result  = IMG_Init(IMG_INIT_PNG);
 	const int image_init_success = IMG_INIT_PNG;
@@ -115,27 +117,38 @@ void Engine::simulate_physics(Uint32 milliseconds_to_simulate, Assets* assets, S
 
 void Engine::render(Uint32 milliseconds_to_simulate, Assets* assets, Scene* scene, Configuration* config)
 {
+
 	const int render_clear_success = 0;
-	const int render_clear_result  = SDL_RenderClear(_renderer);
-	if(render_clear_result != render_clear_success)
+	const int render_clear_result = SDL_RenderClear(_renderer);
+	if (render_clear_result != render_clear_success)
 	{
 		std::cout << "Failed to clear renderer" << std::endl;
 		std::cout << "SDL Error: " << SDL_GetError() << std::endl;
 		exit(1);
 	}
 
-	const Uint8 red   = 0;
-	const Uint8 green = 0;
-	const Uint8 blue  = 0;
-	const Uint8 alpha = 0;
+	const SDL_Color background = scene->background_color();
 	const int render_color_success = 0;
-	const int render_color_result  = SDL_SetRenderDrawColor(_renderer, red, green, blue, alpha);
-	if(render_color_result != render_color_success)
+	const int render_color_result = SDL_SetRenderDrawColor(_renderer, background.r, background.g, background.b, 255);
+	if (render_color_result != render_color_success)
 	{
 		std::cout << "Failed to set render color" << std::endl;
 		std::cout << "SDL Error: " << SDL_GetError() << std::endl;
 		exit(1);
 	}
+
+	//const Uint8 red   = 0;
+	//const Uint8 green = 0;
+	//const Uint8 blue  = 0;
+	//const Uint8 alpha = 0;
+	//const int render_color_success = 0;
+	//const int render_color_result  = SDL_SetRenderDrawColor(_renderer, red, green, blue, alpha);
+	//if(render_color_result != render_color_success)
+	//{
+	//	std::cout << "Failed to set render color" << std::endl;
+	//	std::cout << "SDL Error: " << SDL_GetError() << std::endl;
+	//	exit(1);
+	//}
 
 	std::vector<Game_Object*> sorted_game_objects = scene->get_game_objects();
 	const struct
