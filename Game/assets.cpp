@@ -84,6 +84,24 @@ Assets::Assets(SDL_Renderer* renderer)
 		_assets[texture->id()] = texture;
 	}
 
+	//Lava Hazard Tile Texture
+	{
+		Texture* texture = new Texture("Texture.Lava", "Assets/lava.space.png", renderer);
+		_assets[texture->id()] = texture;
+	}
+
+	//Spike Hazard Tile Texture
+	{
+		Texture* texture = new Texture("Texture.Spike", "Assets/spike.space2.png", renderer);
+		_assets[texture->id()] = texture;
+	}
+
+	/*Poison Hazard Tile Texture*/
+	{
+		Texture* texture = new Texture("Texture.Poison", "Assets/poison.space.png", renderer);
+		_assets[texture->id()] = texture;
+	}
+
 	// Create music sound
 	{
 		Sound* sound = new Sound("Sound.Music", "Assets/music.wav");

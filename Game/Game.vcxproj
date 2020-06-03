@@ -154,6 +154,7 @@
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="game_object.cpp" />
     <ClCompile Include="game_scene.cpp" />
+    <ClCompile Include="hazard2.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pause_scene.cpp" />
@@ -180,6 +181,7 @@
     <ClInclude Include="engine.h" />
     <ClInclude Include="game_object.h" />
     <ClInclude Include="game_scene.h" />
+    <ClInclude Include="hazard2.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="pause_scene.h" />
     <ClInclude Include="pinky.h" />

@@ -2,3 +2,5 @@ C:\Users\Owner\Downloads\tutorial_7\tutorial_7\Game\x64\Debug\Game.exe
 C:\Users\Owner\Downloads\tutorial_7\tutorial_7\Game\x64\Debug\Game.pdb
 C:\Users\Owner\Desktop\tutorial_7\tutorial_7\Game\x64\Debug\Game.exe
 C:\Users\Owner\Desktop\tutorial_7\tutorial_7\Game\x64\Debug\Game.pdb
+C:\Users\Owner\Desktop\Survive-It--master\Game\x64\Debug\Game.exe
+C:\Users\Owner\Desktop\Survive-It--master\Game\x64\Debug\Game.pdb
