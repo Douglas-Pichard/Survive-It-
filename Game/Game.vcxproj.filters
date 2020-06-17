@@ -63,13 +63,7 @@
     <ClCompile Include="player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="spikes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="backgroud.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="pause_scene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="title_screen.cpp">
@@ -84,7 +78,13 @@
     <ClCompile Include="title_background.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hazard2.cpp">
+    <ClCompile Include="blue_boy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="enemy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -140,13 +140,7 @@
     <ClInclude Include="player.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="spikes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="background.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pause_scene.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="title_screen.h">
@@ -161,7 +155,13 @@
     <ClInclude Include="title_background.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hazard2.h">
+    <ClInclude Include="blue_boy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enemy.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

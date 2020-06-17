@@ -28,6 +28,7 @@ public:
 	Circle_2D collider();
 	int height();
 	int width();
+	void set_velocity(Vector_2D velocity);
 
 	void set_translation(Vector_2D translation);
 
@@ -47,4 +48,5 @@ protected:
 	int _height;
 
 	SDL_RendererFlip _flip;
+
 };

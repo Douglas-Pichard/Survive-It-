@@ -70,15 +70,21 @@ BEGIN
     BEGIN
         MENUITEM "Increase Speed",              ID_PLAYER_INCREASESPEED
         MENUITEM "Decrease Speed",              ID_PLAYER_DECREASESPEED
+        MENUITEM "Force Stop",                  ID_PLAYER_FORCESTOP
     END
     POPUP "Credits"
     BEGIN
         MENUITEM "Developers",                  ID_CREDITS_DEVELOPERS
-        MENUITEM "Third Party Libs",            ID_CREDITS_THIRDPARTYLIBS
+        MENUITEM "Reveal Goblins",              ID_CREDITS_THIRDPARTYLIBS
     END
     POPUP "Debug"
     BEGIN
         MENUITEM "Toggle display ID",           ID_DEBUG_TOGGLEDISPLAYID
+        MENUITEM "Toggle display ID color",     ID_DEBUG_TOGGLEDISPLAIIDCOLOR
+    END
+    POPUP "Movement"
+    BEGIN
+        MENUITEM "Teleport",                    40009
     END
 END
 
@@ -93,8 +99,17 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSM
 CAPTION "Dialog"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
-    CTEXT           "James Knight",IDC_STATIC,98,33,118,21
-    PUSHBUTTON      "WOW IMPRESSIVE!",IDC_BUTTON1,114,65,104,16
+    CTEXT           "Douglas Pichard",IDC_STATIC,98,33,118,21
+    PUSHBUTTON      "Can't Believe I Pulled This Off!",IDC_BUTTON1,114,65,104,16
+END
+
+IDD_DIALOG2 DIALOGEX 0, 0, 309, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Goblin Time",IDC_BUTTON1,75,100,150,14
+    CTEXT           "Press To Reveal Goblins!",IDC_STATIC,77,35,144,31,SS_CENTERIMAGE
 END
 
 
@@ -113,6 +128,14 @@ BEGIN
         TOPMARGIN, 7
         BOTTOMMARGIN, 169
     END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
 END
 #endif    // APSTUDIO_INVOKED
 
@@ -123,6 +146,11 @@ END
 //
 
 IDD_DIALOG1 AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG2 AFX_DIALOG_LAYOUT
 BEGIN
     0
 END

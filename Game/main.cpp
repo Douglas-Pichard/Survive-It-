@@ -67,24 +67,7 @@ int main(void)
 
 			}
 		}
-				/*input->get_input();
-
-				if (input->is_button_state(Input::Button::PAUSE, Input::Button_State::PRESSED))
-				{
-					const bool is_paused = scenes.top()->id() == "Pause";
-
-					if (is_paused)
-					{
-						Pause_Scene* pause_scene = (Pause_Scene*)scenes.top();
-						scenes.pop();
-						delete pause_scene;
-					}
-					else
-					{
-						scenes.push(new Pause_Scene);
-
-					}
-				}*/
+				
 
 				scenes.top()->update(engine->window());
 				input->get_input();

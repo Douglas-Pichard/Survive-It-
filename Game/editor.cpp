@@ -3,7 +3,6 @@
 #include "editor.h"
 #include "resource.h"
 #include "player.h"
-
 #include <SDL.h>
 #include <SDL_syswm.h>
 #include <iostream>
@@ -86,11 +85,19 @@ void Editor::update(Input* input, Scene* scene, Configuration* config)
 
     if (input->is_button_state(Input::Button::DEBUG_SHOW_IDS, Input::Button_State::PRESSED))
     {
-        if (config->should_change_color == true)
-        {
-            config->should_change_color = false;
-        }
+       
         config->should_display_ids = !config->should_display_ids;
+    }
+    if (input->is_button_state(Input::Button::FORCE_STOP, Input::Button_State::PRESSED))
+    {
+        Player* player = (Player*)scene->get_game_object("Pinky");
+        player->set_speed(player->speed() * 0);
+    }
+   
+    if (input->is_button_state(Input::Button::TELEPORT, Input::Button_State::PRESSED))
+    {
+        config->teleport = !config->teleport;
+
     }
 }
 

@@ -137,19 +137,6 @@ void Engine::render(Uint32 milliseconds_to_simulate, Assets* assets, Scene* scen
 		exit(1);
 	}
 
-	//const Uint8 red   = 0;
-	//const Uint8 green = 0;
-	//const Uint8 blue  = 0;
-	//const Uint8 alpha = 0;
-	//const int render_color_success = 0;
-	//const int render_color_result  = SDL_SetRenderDrawColor(_renderer, red, green, blue, alpha);
-	//if(render_color_result != render_color_success)
-	//{
-	//	std::cout << "Failed to set render color" << std::endl;
-	//	std::cout << "SDL Error: " << SDL_GetError() << std::endl;
-	//	exit(1);
-	//}
-
 	std::vector<Game_Object*> sorted_game_objects = scene->get_game_objects();
 	const struct
 	{

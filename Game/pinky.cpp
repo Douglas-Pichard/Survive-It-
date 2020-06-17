@@ -4,7 +4,7 @@
 	: Game_Object(id, "Texture.Pinky")
 {
 	
-	_translation = Vector_2D(350, 300);
+	_translation = Vector_2D(350, 350);
 
 }
 	Pinky::~Pinky()

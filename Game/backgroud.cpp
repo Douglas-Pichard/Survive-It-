@@ -7,8 +7,8 @@ Background::Background(std::string id)
 {
 	
 
-	_width = 1700;
-	_height = 900;
+	_width = 1400;
+	_height = 800;
 }
 Background::~Background()
 {

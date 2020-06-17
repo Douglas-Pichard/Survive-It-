@@ -1,12 +1,12 @@
 #include "title_background.h"
 
 Title_Background::Title_Background(std::string id)
-	: Game_Object(id, "Texture.Background1")
+	: Game_Object(id, "Texture.Background2")
 {
 
 
-	_width = 1700;
-	_height = 900;
+	_width = 1400;
+	_height = 800;
 }
 Title_Background::~Title_Background()
 {

@@ -2,7 +2,6 @@
 #include "texture.h"
 #include "animated_texture.h"
 #include "sound.h"
-
 #include <iostream>
 
 Assets::Assets(SDL_Renderer* renderer)
@@ -11,6 +10,10 @@ Assets::Assets(SDL_Renderer* renderer)
 	// Cache Pinky Texture.
 	{
 		Texture* texture = new Texture("Texture.Pinky", "Assets/pinky0.png", renderer);
+		_assets[texture->id()] = texture;
+	}
+	{
+		Texture* texture = new Texture("Texture.Blue", "Assets/enemy.png", renderer);
 		_assets[texture->id()] = texture;
 	}
 	// Create player walking texture.
@@ -53,52 +56,21 @@ Assets::Assets(SDL_Renderer* renderer)
 		_assets[player_animated_texture->id()] = player_animated_texture;
 	}
 
-	// Create player death texture.
-	{
-		const int frame_count = 10;
-		const Uint32 frame_duration_milliseconds = 50;
-		Asset* player_animated_texture = new Animated_Texture("Texture.Pinky.Death", "Assets/pinky.death.png", renderer, 4, 300);
-		_assets[player_animated_texture->id()] = player_animated_texture;
-	}
-
 	// Create collider texture
 	{
 		Texture* texture = new Texture("Texture.Collider", "Assets/collider.png", renderer);
 		_assets[texture->id()] = texture;
 	}
 
-	//Background texture title
-	{
-		Texture* texture = new Texture("Texture.Background1", "Assets/background1.png", renderer);
-		_assets[texture->id()] = texture;
-	}
 	//Background texture game
 	{
-		Texture* texture = new Texture("Texture.Background2", "Assets/background2.png", renderer);
+		Texture* texture = new Texture("Texture.Background2", "Assets/background4.png", renderer);
 		_assets[texture->id()] = texture;
 	}
 
-	//Title Screen Texture
+	//Fire Texture
 	{
-		Texture* texture = new Texture("Texture.Place Holder", "Assets/place.holder.png", renderer);
-		_assets[texture->id()] = texture;
-	}
-
-	//Lava Hazard Tile Texture
-	{
-		Texture* texture = new Texture("Texture.Lava", "Assets/lava.space.png", renderer);
-		_assets[texture->id()] = texture;
-	}
-
-	//Spike Hazard Tile Texture
-	{
-		Texture* texture = new Texture("Texture.Spike", "Assets/spike.space2.png", renderer);
-		_assets[texture->id()] = texture;
-	}
-
-	/*Poison Hazard Tile Texture*/
-	{
-		Texture* texture = new Texture("Texture.Poison", "Assets/poison.space.png", renderer);
+		Texture* texture = new Texture("Texture.Fireball", "Assets/fire.png", renderer);
 		_assets[texture->id()] = texture;
 	}
 
@@ -127,16 +99,6 @@ Assets::Assets(SDL_Renderer* renderer)
 		Sound* sound = new Sound("Sound.Punching", "Assets/punching.wav");
 		_assets[sound->id()] = sound;
 	}
-
-	// Create punching sound
-	{
-		Sound* sound = new Sound("Sound.Death", "Assets/death.wav");
-		_assets[sound->id()] = sound;
-	}
-
-	
-
-	
 }
 
 Assets::~Assets()

@@ -22,6 +22,9 @@ void Input::get_input()
 	_button_state[Button::DECREASE_SPEED] = Button_State::UP;
 	_button_state[Button::SHOW_CREDITS]   = Button_State::UP;
 	_button_state[Button::DEBUG_SHOW_IDS] = Button_State::UP;
+	_button_state[Button::FORCE_STOP] = Button_State::UP;
+	
+	_button_state[Button::TELEPORT] = Button_State::UP;
 
 	for(auto button_state : _button_state)
 	{
@@ -50,6 +53,10 @@ void Input::get_input()
 			{
 				_button_state[Button::QUIT] = Button_State::PRESSED;
 			}
+			else if (event.syswm.msg->msg.win.wParam == ID_PLAYER_FORCESTOP)
+			{
+				_button_state[Button::FORCE_STOP] = Button_State::PRESSED;
+			}
 			else if(event.syswm.msg->msg.win.wParam == ID_PLAYER_INCREASESPEED)
 			{
 				_button_state[Button::INCREASE_SPEED] = Button_State::PRESSED;
@@ -65,6 +72,11 @@ void Input::get_input()
 			else if(event.syswm.msg->msg.win.wParam == ID_DEBUG_TOGGLEDISPLAYID)
 			{
 				_button_state[Button::DEBUG_SHOW_IDS] = Button_State::PRESSED;
+			}
+		
+			else if (event.syswm.msg->msg.win.wParam == ID_CREATE_CREATECHARACTER)
+			{
+				_button_state[Button::TELEPORT] = Button_State::PRESSED;
 			}
 			break;
 

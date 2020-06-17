@@ -45,3 +45,12 @@ SDL_Color Scene::background_color()
 {
 	return _background_color;
 }
+void Scene::add_game_object(Game_Object* game_object)
+{
+	_game_objects[game_object->id()] = game_object;
+}
+void Scene::remove_game_object(std::string id)
+{
+	
+	_game_objects.erase(id);
+}

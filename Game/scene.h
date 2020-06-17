@@ -20,6 +20,8 @@ public:
 	std::vector<Game_Object*> get_game_objects();
 
 	std::string id();
+	void add_game_object(Game_Object* game_object);
+	void remove_game_object(std::string id);
 
 	SDL_Color background_color();
 	

@@ -28,7 +28,10 @@ public:
 		DECREASE_SPEED,
 
 		SHOW_CREDITS,
-
+		FORCE_STOP,
+		
+		TELEPORT,
+		
 		DEBUG_SHOW_IDS
 	};
 
